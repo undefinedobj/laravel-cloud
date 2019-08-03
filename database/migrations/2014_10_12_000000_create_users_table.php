@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
+            $table->string('api_token', 80)->nullable()->unique();
             $table->text('public_key');
             $table->text('private_key');
             $table->text('public_worker_key');
